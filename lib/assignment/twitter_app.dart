@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:tiktok_clone/assignment/twitter_app.dart';
+import 'package:tiktok_clone/assignment/authentication/init_screen.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
-import 'package:tiktok_clone/features/authentication/sign_up_screen.dart';
 
-void main() {
-  runApp(const TwitterApp());
-}
-
-class TikTokApp extends StatelessWidget {
-  const TikTokApp({super.key});
+class TwitterApp extends StatelessWidget {
+  const TwitterApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +12,7 @@ class TikTokApp extends StatelessWidget {
       title: 'TikTok Clone',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
-        primaryColor: const Color(0xFFE9435A),
+        primaryColor: const Color(0xFF1DA1F2),
         appBarTheme: const AppBarTheme(
           foregroundColor: Colors.black,
           backgroundColor: Colors.white,
@@ -29,7 +24,7 @@ class TikTokApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const SignUpScreen(),
+      home: const InitScreen(),
     );
   }
 }

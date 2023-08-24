@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
-import 'package:tiktok_clone/onboading/interests_screen.dart';
+import 'package:tiktok_clone/features/onboading/interests_screen.dart';
 import 'package:tiktok_clone/widgets/form_button.dart';
 
 class BirthdayScreen extends StatefulWidget {

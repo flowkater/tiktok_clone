@@ -6,6 +6,7 @@ import 'package:tiktok_clone/assignment/authentication/finish_screen.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 
 import '../../constants/sizes.dart';
+import '../widget/bottom_button.dart';
 
 class CustomizeScreen extends StatefulWidget {
   final String name;
@@ -172,7 +173,7 @@ class _CustomizeScreenState extends State<CustomizeScreen> {
                   ),
                 ],
               ),
-              GestureDetector(
+              BottomButton(
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => FinishScreen(
@@ -183,22 +184,12 @@ class _CustomizeScreenState extends State<CustomizeScreen> {
                     ),
                   ));
                 },
-                child: Container(
-                  width: double.infinity,
-                  height: Sizes.size52,
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor,
-                    borderRadius: BorderRadius.circular(Sizes.size24),
-                  ),
-                  child: const Center(
-                    child: Text(
-                      "Next",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: Sizes.size20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                child: const Text(
+                  "Next",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: Sizes.size20,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               )

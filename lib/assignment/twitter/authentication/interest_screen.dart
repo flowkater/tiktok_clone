@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tiktok_clone/assignment/authentication/interest_detail_screen.dart';
-import 'package:tiktok_clone/assignment/widget/interest_category_button.dart';
-import 'package:tiktok_clone/assignment/widget/layout.dart';
+import 'package:tiktok_clone/assignment/twitter/authentication/interest_detail_screen.dart';
+import 'package:tiktok_clone/assignment/twitter/widget/interest_category_button.dart';
+import 'package:tiktok_clone/assignment/twitter/widget/layout.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
 

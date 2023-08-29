@@ -1,8 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:tiktok_clone/assignment/authentication/create_account_screen.dart';
-import 'package:tiktok_clone/assignment/widget/twitter_auth_button.dart';
+import 'package:tiktok_clone/assignment/twitter/authentication/create_account_screen.dart';
+import 'package:tiktok_clone/assignment/twitter/widget/twitter_auth_button.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
 

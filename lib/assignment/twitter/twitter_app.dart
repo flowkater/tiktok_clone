@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tiktok_clone/assignment/authentication/init_screen.dart';
+import 'package:tiktok_clone/assignment/twitter/authentication/init_screen.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
 
 class TwitterApp extends StatelessWidget {

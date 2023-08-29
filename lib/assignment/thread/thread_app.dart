@@ -1,23 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:tiktok_clone/assignment/thread/thread_app.dart';
+import 'package:tiktok_clone/assignment/thread/screens/main_navigation_screen.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
-import 'package:tiktok_clone/features/onboading/interests_screen.dart';
 
-void main() {
-  runApp(const ThreadApp());
-}
-
-class TikTokApp extends StatelessWidget {
-  const TikTokApp({super.key});
+class ThreadApp extends StatelessWidget {
+  const ThreadApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'TikTok Clone',
+      title: 'Thread',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
-        primaryColor: const Color(0xFFE9435A),
+        primaryColor: const Color(0xFF1DA1F2),
         appBarTheme: const AppBarTheme(
           foregroundColor: Colors.black,
           backgroundColor: Colors.white,
@@ -29,7 +24,7 @@ class TikTokApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const InterestsScreen(),
+      home: const MainNavigationScreen(),
     );
   }
 }

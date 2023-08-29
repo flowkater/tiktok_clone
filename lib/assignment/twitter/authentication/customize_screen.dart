@@ -2,10 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:tiktok_clone/assignment/authentication/finish_screen.dart';
+import 'package:tiktok_clone/assignment/twitter/authentication/finish_screen.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 
-import '../../constants/sizes.dart';
+import '../../../constants/sizes.dart';
 import '../widget/bottom_button.dart';
 
 class CustomizeScreen extends StatefulWidget {

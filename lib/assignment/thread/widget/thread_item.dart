@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:tiktok_clone/assignment/thread/widget/bottom_modal.dart';
 import 'package:tiktok_clone/assignment/thread/widget/vertical_line.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
 
@@ -35,6 +36,22 @@ class ThreadItem extends StatelessWidget {
           const Divider(),
         ],
       ),
+    );
+  }
+
+  void _onShowModal(BuildContext context) {
+    showModalBottomSheet(
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(
+          top: Radius.circular(20),
+        ),
+      ),
+      clipBehavior: Clip.antiAliasWithSaveLayer,
+      backgroundColor: Colors.white,
+      context: context,
+      builder: (context) => const Wrap(children: [
+        BottomModal(),
+      ]),
     );
   }
 
@@ -79,9 +96,12 @@ class ThreadItem extends StatelessWidget {
                         const SizedBox(
                           width: Sizes.size10,
                         ),
-                        const Icon(
-                          Icons.more_horiz,
-                          size: Sizes.size20,
+                        GestureDetector(
+                          onTap: () => _onShowModal(context),
+                          child: const Icon(
+                            Icons.more_horiz,
+                            size: Sizes.size20,
+                          ),
                         ),
                       ],
                     )

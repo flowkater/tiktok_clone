@@ -158,25 +158,26 @@ class BottomReportModal extends StatelessWidget {
         ),
         Expanded(
           child: ListView.separated(
-              separatorBuilder: (context, index) => const Divider(
-                    height: 0,
-                  ),
-              itemCount: items.length,
-              itemBuilder: (context, index) => ListTile(
-                    title: Text(
-                      items[index],
-                      style: const TextStyle(
-                        fontSize: Sizes.size16,
-                      ),
-                    ),
-                    trailing: const Icon(
-                      Icons.keyboard_arrow_right,
-                      size: Sizes.size20,
-                    ),
-                    onTap: () {
-                      print("items[index] $index");
-                    },
-                  )),
+            separatorBuilder: (context, index) => const Divider(
+              height: 0,
+            ),
+            itemCount: items.length,
+            itemBuilder: (context, index) => ListTile(
+              title: Text(
+                items[index],
+                style: const TextStyle(
+                  fontSize: Sizes.size16,
+                ),
+              ),
+              trailing: const Icon(
+                Icons.keyboard_arrow_right,
+                size: Sizes.size20,
+              ),
+              onTap: () {
+                print("items[index] $index");
+              },
+            ),
+          ),
         )
       ]),
     );

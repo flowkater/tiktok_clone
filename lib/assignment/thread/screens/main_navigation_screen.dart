@@ -6,6 +6,7 @@ import 'package:tiktok_clone/assignment/thread/screens/porifle_screen.dart';
 import 'package:tiktok_clone/assignment/thread/screens/post_screen.dart';
 import 'package:tiktok_clone/assignment/thread/screens/search_screen.dart';
 import 'package:tiktok_clone/assignment/thread/widget/nav_tab.dart';
+import 'package:tiktok_clone/assignment/thread/widget/post_modal.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
 
 class MainNavigationScreen extends StatefulWidget {
@@ -22,6 +23,22 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
     setState(() {
       _selectedIndex = index;
     });
+  }
+
+  void _onShowModal(BuildContext context) {
+    showModalBottomSheet(
+      isScrollControlled: true,
+      useSafeArea: true,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(
+          top: Radius.circular(20),
+        ),
+      ),
+      clipBehavior: Clip.antiAliasWithSaveLayer,
+      backgroundColor: Colors.white,
+      context: context,
+      builder: (context) => const PostModal(),
+    );
   }
 
   @override
@@ -76,7 +93,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
                 isSelected: _selectedIndex == 2,
                 icon: FontAwesomeIcons.penToSquare,
                 selectedIcon: FontAwesomeIcons.solidPenToSquare,
-                onTap: () => _onTap(2),
+                onTap: () => _onShowModal(context),
               ),
               NavTab(
                 text: "Inbox",

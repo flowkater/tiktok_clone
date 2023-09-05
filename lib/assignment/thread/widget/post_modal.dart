@@ -1,8 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
 
-class PostModal extends StatelessWidget {
+class PostModal extends StatefulWidget {
   const PostModal({super.key});
+
+  @override
+  State<PostModal> createState() => _PostModalState();
+}
+
+class _PostModalState extends State<PostModal> {
+  final TextEditingController _textEditingController = TextEditingController();
+
+  String _text = "";
+
+  bool _isTextEmpty() {
+    return _text.isEmpty;
+  }
+
+  @override
+  void initState() {
+    _textEditingController.addListener(() {
+      setState(() {
+        _text = _textEditingController.text;
+      });
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -106,11 +129,13 @@ class PostModal extends StatelessWidget {
                                 constraints: const BoxConstraints(
                                   minHeight: 30,
                                 ),
-                                child: const Expanded(
+                                child: Expanded(
                                   child: TextField(
+                                    controller: _textEditingController,
+                                    autofocus: true,
                                     keyboardType: TextInputType.multiline,
-                                    maxLines: null, //
-                                    decoration: InputDecoration(
+                                    maxLines: null,
+                                    decoration: const InputDecoration(
                                       isDense: true,
                                       border: InputBorder.none,
                                       hintText: 'Start a thread...',
@@ -165,7 +190,8 @@ class PostModal extends StatelessWidget {
                     style: TextStyle(
                       fontSize: Sizes.size18,
                       fontWeight: FontWeight.bold,
-                      color: Colors.blue.shade300,
+                      color:
+                          _isTextEmpty() ? Colors.blue.shade300 : Colors.blue,
                     ),
                   ),
                 ],

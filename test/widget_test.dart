@@ -4,6 +4,8 @@
 // utility in the flutter_test package. For example, you can send tap and scroll
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
+import 'package:flutter_test/flutter_test.dart';
+import 'package:tiktok_clone/assignment/thread/model/activity_model.dart';
 
 void main() {
   // testWidgets('Counter increments smoke test', (WidgetTester tester) async {
@@ -22,4 +24,17 @@ void main() {
   //   expect(find.text('0'), findsNothing);
   //   expect(find.text('1'), findsOneWidget);
   // });
+
+  test('Activity Model Test', () {
+    final activity = ActivityModel(
+      name: "tony",
+      time: "4h",
+      message: "Mentioned you",
+      subMessage:
+          "Here's a thread you shouyld follow if you love botany @jane_mobbins",
+      image: generateImageUrl(210),
+    );
+
+    expect(activity.getImageNumber(), 210);
+  });
 }

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:tiktok_clone/assignment/thread/screens/favorite_screen.dart';
+import 'package:tiktok_clone/assignment/thread/screens/discover_screen.dart';
 import 'package:tiktok_clone/assignment/thread/screens/home_screen.dart';
 import 'package:tiktok_clone/assignment/thread/screens/porifle_screen.dart';
-import 'package:tiktok_clone/assignment/thread/screens/post_screen.dart';
 import 'package:tiktok_clone/assignment/thread/screens/search_screen.dart';
 import 'package:tiktok_clone/assignment/thread/widget/nav_tab.dart';
 import 'package:tiktok_clone/assignment/thread/widget/post_modal.dart';
@@ -55,12 +54,8 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
             child: const SearchScreen(),
           ),
           Offstage(
-            offstage: _selectedIndex != 2,
-            child: const PostScreen(),
-          ),
-          Offstage(
             offstage: _selectedIndex != 3,
-            child: const FavoriteScreen(),
+            child: const DiscoverScreen(),
           ),
           Offstage(
             offstage: _selectedIndex != 4,

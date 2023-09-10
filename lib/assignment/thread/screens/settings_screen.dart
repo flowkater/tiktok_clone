@@ -20,7 +20,7 @@ class SettingsScreen extends StatelessWidget {
             ListTile(
               leading: const Icon(
                 FontAwesomeIcons.userPlus,
-                color: Colors.black,
+                // color: Colors.black,
               ),
               horizontalTitleGap: 0,
               title: const Text('Follow and invite friends'),
@@ -31,7 +31,7 @@ class SettingsScreen extends StatelessWidget {
             ListTile(
               leading: const FaIcon(
                 FontAwesomeIcons.bell,
-                color: Colors.black,
+                // color: Colors.black,
               ),
               horizontalTitleGap: 0,
               title: const Text('Notifications'),
@@ -42,7 +42,7 @@ class SettingsScreen extends StatelessWidget {
             ListTile(
               leading: const FaIcon(
                 FontAwesomeIcons.lock,
-                color: Colors.black,
+                // color: Colors.black,
               ),
               horizontalTitleGap: 0,
               title: const Text('Privacy'),
@@ -57,7 +57,7 @@ class SettingsScreen extends StatelessWidget {
             ListTile(
               leading: const FaIcon(
                 FontAwesomeIcons.circleUser,
-                color: Colors.black,
+                // color: Colors.black,
               ),
               horizontalTitleGap: 0,
               title: const Text('Account'),
@@ -68,7 +68,7 @@ class SettingsScreen extends StatelessWidget {
             ListTile(
               leading: const FaIcon(
                 FontAwesomeIcons.hospital,
-                color: Colors.black,
+                // color: Colors.black,
               ),
               horizontalTitleGap: 0,
               title: const Text('Help'),
@@ -79,7 +79,7 @@ class SettingsScreen extends StatelessWidget {
             ListTile(
               leading: const FaIcon(
                 FontAwesomeIcons.circleInfo,
-                color: Colors.black,
+                // color: Colors.black,
               ),
               horizontalTitleGap: 0,
               title: const Text('About'),

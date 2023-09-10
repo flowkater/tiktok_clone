@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tiktok_clone/assignment/thread/model/activity_model.dart';
+import 'package:tiktok_clone/assignment/thread/utils/utils.dart';
 import 'package:tiktok_clone/assignment/thread/widget/activity_list_tile.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
 
@@ -24,6 +25,7 @@ class _SearchScreenState extends State<SearchScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = isDarkMode(context);
     return Scaffold(
       appBar: AppBar(
         title: const Align(
@@ -55,9 +57,10 @@ class _SearchScreenState extends State<SearchScreen> {
                 fontSize: Sizes.size16,
               ),
               decoration: BoxDecoration(
-                color: Colors.grey.shade200,
+                color: isDark ? Colors.white : Colors.grey.shade200,
                 borderRadius: BorderRadius.circular(Sizes.size12),
               ),
+              itemColor: Colors.grey.shade500,
             ),
           ),
         ),

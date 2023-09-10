@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok_clone/assignment/thread/screens/settings_screen.dart';
+import 'package:tiktok_clone/assignment/thread/utils/utils.dart';
 import 'package:tiktok_clone/assignment/thread/widget/thread_item.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -261,9 +262,10 @@ class PersistentTabBar extends SliverPersistentHeaderDelegate {
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
+    final isDark = isDarkMode(context);
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white,
+        // color: Colors.white,
         border: Border(
           bottom: BorderSide(
             color: Colors.grey.shade200,
@@ -271,16 +273,16 @@ class PersistentTabBar extends SliverPersistentHeaderDelegate {
           ),
         ),
       ),
-      child: const TabBar(
+      child: TabBar(
         indicatorSize: TabBarIndicatorSize.tab,
-        indicatorColor: Colors.black,
+        indicatorColor: isDark ? Colors.white : Colors.black,
         indicatorWeight: 0.5,
-        labelColor: Colors.black,
-        unselectedLabelColor: Colors.grey,
-        labelPadding: EdgeInsets.symmetric(
+        // labelColor: Colors.black,
+        // unselectedLabelColor: Colors.grey,
+        labelPadding: const EdgeInsets.symmetric(
           vertical: 10,
         ),
-        tabs: [
+        tabs: const [
           Text(
             "Threads",
             style: TextStyle(

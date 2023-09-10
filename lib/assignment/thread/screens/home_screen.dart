@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tiktok_clone/assignment/thread/utils/utils.dart';
 import 'package:tiktok_clone/assignment/thread/widget/thread_item.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
 
@@ -7,12 +8,18 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = isDarkMode(context);
+
     return Scaffold(
       appBar: AppBar(
         title: SizedBox(
           height: Sizes.size40,
           width: Sizes.size40,
-          child: Image.asset("images/threads-logo.png", fit: BoxFit.contain),
+          child: Image.asset(
+              isDark
+                  ? "images/threads-logo-white.png"
+                  : "images/threads-logo.png",
+              fit: BoxFit.contain),
         ),
       ),
       body: SafeArea(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tiktok_clone/assignment/thread/model/activity_model.dart';
+import 'package:tiktok_clone/assignment/thread/utils/utils.dart';
 import 'package:tiktok_clone/assignment/thread/widget/activity_list_tile.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
 import 'dart:math';
@@ -58,6 +59,7 @@ class _DiscoverScreenState extends State<DiscoverScreen>
 
   @override
   Widget build(BuildContext context) {
+    final isDark = isDarkMode(context);
     return DefaultTabController(
       length: tabs.length,
       child: Scaffold(
@@ -85,11 +87,11 @@ class _DiscoverScreenState extends State<DiscoverScreen>
               ),
               indicator: BoxDecoration(
                 borderRadius: BorderRadius.circular(Sizes.size12),
-                color: Colors.black,
+                // color: Colors.black,
               ),
               indicatorPadding: EdgeInsets.zero,
-              labelColor: Colors.white,
-              unselectedLabelColor: Colors.black,
+              // labelColor: Colors.white,
+              // unselectedLabelColor: Colors.black,
               indicatorSize: TabBarIndicatorSize.label,
               labelPadding: const EdgeInsets.symmetric(
                 horizontal: Sizes.size4,
@@ -103,7 +105,9 @@ class _DiscoverScreenState extends State<DiscoverScreen>
                         borderRadius: BorderRadius.circular(Sizes.size12),
                         border: Border.all(
                             color: i == _currentTabIndex
-                                ? Colors.black
+                                ? isDark
+                                    ? Colors.white
+                                    : Colors.black
                                 : Colors.transparent),
                       ),
                       child: Align(

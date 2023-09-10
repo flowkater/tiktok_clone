@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok_clone/assignment/thread/screens/discover_screen.dart';
 import 'package:tiktok_clone/assignment/thread/screens/home_screen.dart';
-import 'package:tiktok_clone/assignment/thread/screens/porifle_screen.dart';
+import 'package:tiktok_clone/assignment/thread/screens/profile_screen.dart';
 import 'package:tiktok_clone/assignment/thread/screens/search_screen.dart';
+import 'package:tiktok_clone/assignment/thread/utils/utils.dart';
 import 'package:tiktok_clone/assignment/thread/widget/nav_tab.dart';
 import 'package:tiktok_clone/assignment/thread/widget/post_modal.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
@@ -42,7 +43,10 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = isDarkMode(context);
+
     return Scaffold(
+      backgroundColor: isDark ? Colors.black : Colors.white,
       body: Stack(
         children: [
           Offstage(
@@ -64,6 +68,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
         ],
       ),
       bottomNavigationBar: BottomAppBar(
+        color: isDark ? Colors.black : Colors.white,
         child: Padding(
           padding: const EdgeInsets.all(Sizes.size12),
           child: Row(

@@ -33,7 +33,7 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
                 padding: EdgeInsets.only(left: 16.0),
                 child: Icon(
                   Icons.lock_outline,
-                  color: Colors.black,
+                  // color: Colors.black,
                 ),
               ),
               title: const Padding(
@@ -45,7 +45,7 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
             ListTile(
               leading: const FaIcon(
                 FontAwesomeIcons.at,
-                color: Colors.black,
+                // color: Colors.black,
               ),
               horizontalTitleGap: 0,
               title: const Text('Mentions'),
@@ -73,7 +73,7 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
             ListTile(
               leading: const FaIcon(
                 FontAwesomeIcons.bellSlash,
-                color: Colors.black,
+                // color: Colors.black,
               ),
               horizontalTitleGap: 0,
               title: const Text('Muted'),
@@ -88,7 +88,7 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
             ListTile(
               leading: const FaIcon(
                 FontAwesomeIcons.eyeSlash,
-                color: Colors.black,
+                // color: Colors.black,
               ),
               horizontalTitleGap: 0,
               title: const Text('Hidden Words'),
@@ -103,7 +103,7 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
             ListTile(
               leading: const FaIcon(
                 FontAwesomeIcons.peopleGroup,
-                color: Colors.black,
+                // color: Colors.black,
               ),
               horizontalTitleGap: 0,
               title: const Text('Profiles you follow'),
@@ -140,7 +140,7 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
             ListTile(
               leading: const FaIcon(
                 FontAwesomeIcons.circleXmark,
-                color: Colors.black,
+                // color: Colors.black,
               ),
               horizontalTitleGap: 0,
               title: const Text('Blocked profiles'),
@@ -155,7 +155,7 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
             ListTile(
               leading: const FaIcon(
                 FontAwesomeIcons.heart,
-                color: Colors.black,
+                // color: Colors.black,
               ),
               horizontalTitleGap: 0,
               title: const Text('Hide likes'),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:tiktok_clone/assignment/thread/utils/utils.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
 
 class NavTab extends StatelessWidget {
@@ -20,6 +21,7 @@ class NavTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = isDarkMode(context);
     return Expanded(
       child: GestureDetector(
         onTap: () => onTap(),
@@ -31,7 +33,7 @@ class NavTab extends StatelessWidget {
             children: [
               FaIcon(
                 isSelected ? selectedIcon : icon,
-                color: Colors.grey.shade900,
+                color: isDark ? Colors.white : Colors.grey.shade900,
                 size: Sizes.size28,
               ),
             ],

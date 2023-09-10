@@ -147,9 +147,9 @@ class SearchListTile extends StatelessWidget {
               message,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: Sizes.size16,
-                color: Colors.grey.shade600,
+                // color: Colors.grey.shade600,
               ),
             ),
             const SizedBox(
@@ -162,7 +162,7 @@ class SearchListTile extends StatelessWidget {
                 subMessage!,
                 style: const TextStyle(
                   fontSize: Sizes.size16,
-                  color: Colors.black,
+                  // color: Colors.black,
                 ),
               )
             : null,
@@ -189,7 +189,7 @@ class SearchListTile extends StatelessWidget {
             style: TextStyle(
               fontSize: Sizes.size16,
               fontWeight: FontWeight.bold,
-              color: Colors.black,
+              // color: Colors.black,
             ),
           ),
         ));
